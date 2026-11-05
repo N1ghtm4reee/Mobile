@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start ex00 Android emulator",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/start_android_emulator.sh",
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "owner": "android-emulator",
+          "pattern": {
+            "regexp": "^$"
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": ".*",
+            "endsPattern": "Boot completed"
+          }
+        }
+      ],
+      "presentation": {
+        "reveal": "silent",
+        "close": false
+      }
+    }
+  ]
+}
